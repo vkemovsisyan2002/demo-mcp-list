@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html><body>
+<form action="/category/23" id="ff" method="GET" name="f">
+  <!-- location: excluded (region_id/YEREVAN_DISTRICTS already covers this) -->
+  <div class="filter-section">
+    <div class="mu-wrapper">
+      <div class="label-wrapper">
+        <p>City / Area</p>
+        <a class="reset-btn"><p>Reset</p></a>
+      </div>
+      <div class="mu8">
+        <input id="_idn" name="n" type="hidden" value="0">
+        <div class="l">
+          <div class="i" data-name="Kentron" data-value="8"><input type="checkbox" value="8"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- simple single-select filter -->
+  <div class="filter-section">
+    <div class="si7">
+      <input id="_id_a13" name="_a13" type="hidden" value="">
+      <div class="label-and-reset-container"><div class="label-container">Transmission</div></div>
+      <div class="options-container">
+        <div class="option-container" data-value="1">Manual</div>
+        <div class="option-container" data-value="2">Automatic</div>
+      </div>
+    </div>
+  </div>
+  <!-- multi-select checkbox filter -->
+  <div class="filter-section">
+    <div class="mu10">
+      <input id="_id_a4" name="_a4" type="hidden" value="">
+      <div class="label-and-reset-container"><div class="label-container">Number of Rooms</div></div>
+      <div class="options-container">
+        <div class="option-container" data-value="1"><input id="_a4mc1" name="_a4[]" type="checkbox" value="1"><label for="_a4mc1">1</label></div>
+        <div class="option-container" data-value="2"><input id="_a4mc2" name="_a4[]" type="checkbox" value="2"><label for="_a4mc2">2</label></div>
+      </div>
+    </div>
+  </div>
+  <!-- searchable dropdown filter (pattern B), e.g. vehicle Make -->
+  <div class="filter-section brand-section">
+    <div class="mu-wrapper">
+      <div class="label-wrapper">
+        <p>Make</p>
+        <a class="reset-btn"><p>Reset</p></a>
+      </div>
+      <div class="ca10 mu8">
+        <input id="_idmake" name="bid" type="hidden" value="">
+        <div class="l">
+          <div class="section-label hide-search" data-name="@hideSearch:Popular" data-value="0"><input type="checkbox" value="0"></div>
+          <div class="i" data-name="Mercedes-Benz" data-value="49"><input type="checkbox" value="49"></div>
+          <div class="i" data-name="Toyota" data-value="76"><input type="checkbox" value="76"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- dependent sub-filter with no static options (e.g. Model depends on Make): skipped -->
+  <div class="filter-section model-section">
+    <div class="mu-wrapper">
+      <div class="label-wrapper"><p>Model</p></div>
+      <div class="ca21 mu8">
+        <input id="_idmodel" name="mid" type="hidden" value="">
+        <div class="l"><div class="no-search-results">No results</div></div>
+      </div>
+    </div>
+  </div>
+  <!-- numeric range filter -->
+  <div class="filter-section">
+    <div class="r">
+      <div class="ra3">
+        <div class="range-component-label-action">
+          <div class="range-component-label"><span>Floor</span></div>
+        </div>
+        <div class="dropdown-range-elements-container">
+          <input id="_id_a11_1" name="_a11_1" type="hidden" value="">
+        </div>
+        <input id="_id_a11_2" name="_a11_2" type="hidden" value="">
+      </div>
+    </div>
+  </div>
+  <!-- price range: unlabeled .ra3, skipped (currency/price are dedicated arguments) -->
+  <div class="filter-section">
+    <div class="si7">
+      <input id="_idcrc" name="crc" type="hidden" value="0">
+      <div class="options-container">
+        <div class="option-container selected" data-value="0">AMD</div>
+      </div>
+    </div>
+    <div class="ra3">
+      <div class="range-component-label-action"><div class="range-component-label"><span></span></div></div>
+      <input name="pmin" type="hidden" value="">
+      <input name="pmax" type="hidden" value="">
+    </div>
+  </div>
+</form>
+</body></html>
