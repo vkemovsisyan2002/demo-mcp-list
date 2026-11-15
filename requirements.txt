@@ -1,0 +1,3 @@
+patchright
+beautifulsoup4
+requests
