@@ -1,38 +1,5 @@
-name: List.am Radar
-
-on:
-  workflow_dispatch:
-  schedule:
-    - cron: '*/30 * * * *'
-
-jobs:
-  run-monitor:
-    runs-on: ubuntu-latest
-
-    steps:
-    - name: Checkout repository
-      uses: actions/checkout@v4
-
-    - name: Set up Python
-      uses: actions/setup-python@v5
-      with:
-        python-version: '3.10'
-        cache: 'pip'
-
     - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
-        pip install patchright beautifulsoup4 requests mcp
+        pip install patchright beautifulsoup4 requests mcp httpx
         patchright install chromium
-
-    - name: Run script
-      env:
-        TELEGRAM_TOKEN: "9025835802:AAF1R1W3x6-eSlTLZFjMlQ5HdG6x3EPSmMM"
-        TELEGRAM_CHAT_ID: "-1003925564678"
-      run: python -m src.listam_mcp
-
-    - name: Save database
-      uses: stefanzweifel/git-auto-commit-action@v5
-      with:
-        commit_message: "Auto update seen_ads.txt"
-        file_pattern: seen_ads.txt
