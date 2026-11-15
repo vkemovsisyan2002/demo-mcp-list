@@ -1,3 +1,4 @@
 patchright
 beautifulsoup4
 requests
+mcp
